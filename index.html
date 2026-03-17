@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中考道法知识点记忆助手</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>中考道法知识点记忆助手</h1>
+      <p>按章节记忆 + 自测刷题 + 错题巩固，帮你把道法知识点记牢。</p>
+    </header>
+
+    <main>
+      <section class="panel controls">
+        <h2>学习设置</h2>
+        <div class="row">
+          <label for="topic-select">选择主题：</label>
+          <select id="topic-select"></select>
+        </div>
+        <div class="row">
+          <label for="mode-select">学习模式：</label>
+          <select id="mode-select">
+            <option value="review">知识点记忆</option>
+            <option value="quiz">自测练习</option>
+          </select>
+        </div>
+        <button id="start-btn">开始学习</button>
+      </section>
+
+      <section class="panel status">
+        <h2>学习统计</h2>
+        <p>已掌握知识点：<strong id="mastered-count">0</strong></p>
+        <p>错题数量：<strong id="wrong-count">0</strong></p>
+        <p>连续答对：<strong id="streak-count">0</strong></p>
+        <button id="review-wrong-btn">只练错题</button>
+        <button id="reset-btn" class="danger">重置学习记录</button>
+      </section>
+
+      <section class="panel card-panel" id="study-area">
+        <h2 id="card-title">请先开始学习</h2>
+        <p id="card-content">点击“开始学习”后，这里会出现知识点或题目。</p>
+        <div id="choices" class="choices"></div>
+        <div class="actions">
+          <button id="show-answer-btn" class="secondary">显示答案/解析</button>
+          <button id="mark-mastered-btn">我记住了</button>
+          <button id="next-btn">下一个</button>
+        </div>
+        <p id="feedback" class="feedback"></p>
+      </section>
+    </main>
+
+    <footer>
+      <small>建议每天复习 20 分钟，坚持一周明显提升记忆效果。</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
