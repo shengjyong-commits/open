@@ -1,0 +1,125 @@
+:root {
+  color-scheme: light;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --bg: #f5f7ff;
+  --card: #ffffff;
+  --primary: #3a5cff;
+  --text: #1f2430;
+  --muted: #667085;
+  --danger: #d92d20;
+  --ok: #027a48;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(10, 20, 40, 0.08);
+}
+
+.card-panel {
+  grid-column: 1 / -1;
+  min-height: 280px;
+}
+
+.row {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+select,
+button {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  font-size: 0.95rem;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #eef2ff;
+  color: #344054;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.choices {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.choice-btn {
+  text-align: left;
+  background: #f8f9fc;
+  color: var(--text);
+  border: 1px solid #d0d5dd;
+}
+
+.choice-btn.correct {
+  background: #ecfdf3;
+  border-color: #12b76a;
+}
+
+.choice-btn.wrong {
+  background: #fff1f3;
+  border-color: #f04438;
+}
+
+.feedback {
+  color: var(--muted);
+  min-height: 1.5rem;
+}
+
+.feedback.ok {
+  color: var(--ok);
+}
+
+.feedback.error {
+  color: var(--danger);
+}
